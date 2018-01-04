@@ -11,10 +11,10 @@ class AuroraCli < Formula
     sha256 "f81dbf4693ca54388d6c1e1d21baab81c128240d7b82e97e9669641112c27fda" => :yosemite
   end
 
-  # Update binary_util OS map for OSX Sierra.
+  # Custom update for 0.16 and High Sierra
   patch do
-    url "https://github.com/thinker0/aurora/commit/a92876a1.patch"
-    sha256 "b846045b2916c9d82a149bda06d98a2dabdbac435c16ba2943a90344bf55f344"
+    url "https://raw.githubusercontent.com/amperity/homebrew-aurora-cli/aurora-0.16/Formula/pants.diff"
+    sha256 "7aff12e2a65bde64057e0deef412061d8f2c9014197331463835ce3152ab75e4"
   end
   depends_on :python if MacOS.version <= :snow_leopard
 
