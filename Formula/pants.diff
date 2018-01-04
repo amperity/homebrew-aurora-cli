@@ -1,0 +1,24 @@
+diff --git a/pants.ini b/pants.ini
+index 70db14b..c22425d 100644
+--- a/pants.ini
++++ b/pants.ini
+@@ -12,7 +12,7 @@
+ # limitations under the License.
+ 
+ [GLOBAL]
+-pants_version: 1.1.0-rc7
++pants_version: 1.2.0rc0
+ 
+ plugins: [
+     'pantsbuild.pants.contrib.python.checks==%(pants_version)s',
+@@ -40,6 +40,10 @@ version: 0.9.1
+ interpreter_requirement: CPython>=2.7,<3
+ 
+ 
++[binaries]
++path_by_id: {('darwin', '17'): ('mac', '10.12')}
++
++
+ # We have some modules that have side-effects upon import, including starting a repl, so we can't
+ # use python-eval to validate our BUILD deps currently.
+ [compile.python-eval]
